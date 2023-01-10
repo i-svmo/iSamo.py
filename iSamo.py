@@ -12,10 +12,10 @@ def index():
 @app.route('/apply_filter', methods=['POST'])
 def apply_filter():
   # Get the file from the request
-  file = request.files['file']
+  tile = request.files['file']
 
   # Open the DNG file
-  with rawpy.imread(file) as raw:
+  with rawpy.imread(fiIMG_1812.DNGle) as raw:
     # Extract the metadata
     metadata = raw.metadata
     # Apply the filter using the metadata
